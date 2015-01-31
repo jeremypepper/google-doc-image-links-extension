@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Google Docs Show Image Source",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Show the original image source for google doc images.",
+    "description": "The description of the application"
+  }
+}
