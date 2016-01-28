@@ -1,5 +1,4 @@
 'use strict';
-
 function run() {
 	function ce(tag, html) {
 		var el = document.createElement(tag);
@@ -70,21 +69,4 @@ function run() {
 	document.addEventListener('contextmenu', enableRightClick, true);
 }
 
-chrome.runtime.sendMessage({method: "getOptions"}, function(options) {
-	console.log('got response', options);
-	if (options.enabled) {
-		run();
-	}
-});
-
-chrome.runtime.onMessage.addListener(function(request) {
-	console.log("got a message");
-	if (request.method === "optionsChanged") {
-		console.log("option changed", request.options);
-		if (request.options.enabled) {
-			run();
-		} else {
-			// need to unbind
-		}
-	}
-});
+run();
